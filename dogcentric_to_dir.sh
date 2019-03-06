@@ -6,7 +6,7 @@ then
 fi
 
 dataset_dir=$1
-find "$dataset_dir" -name "*.tar.gz" | xargs -i tar xzf {}
+find "$dataset_dir" -name "*.tar.gz" | xargs -i tar xzf {} -C "$dataset_dir"
 rm -rf "$dataset_dir/Hime/"
 rm -rf "$dataset_dir/Ringo/"
 rm -rf "$dataset_dir/Ryu/"
